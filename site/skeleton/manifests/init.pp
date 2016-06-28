@@ -5,11 +5,11 @@ class skeleton {
     group => 'root',
     mode => '0755'
   }
-  file {'/etc/skel/.bashrc':
+  file { '/etc/skel/.bashrc':
     ensure => file,
-    source => 'puppet:///modules/skeleton/bashrc'
     owner => 'root',
     group => 'root',
     mode => '0644',
+    source => 'puppet:///modules/skeleton/bashrc',
   }
 }
