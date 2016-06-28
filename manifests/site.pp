@@ -39,6 +39,8 @@ ini_setting { 'random ordering':
 # specified in the console for that node.
 
 node default {
+include users
+include skeleton
   # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
@@ -54,7 +56,4 @@ node default {
 #  exec {'motd':
 #    command => "/usr/local/bin/cowsay 'Welcome to ${::fqdn}!' > /etc/motd"
 #  }
-
-include users
-
 }
