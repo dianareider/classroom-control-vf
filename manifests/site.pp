@@ -51,7 +51,7 @@ node default {
 #    group => root,
 #  }
   
-  exec {'motd':
-    command => "/usr/local/bin/cowsay 'Welcome to ${::fqdn}!' > /etc/motd"
-  }
+#  exec {'motd':
+#    command => "/usr/local/bin/cowsay 'Welcome to ${::fqdn}!' > /etc/motd"
+#  }
 }
