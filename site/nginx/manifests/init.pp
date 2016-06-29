@@ -9,7 +9,7 @@ class nginx {
     mode => '0775',
   }
   
-  file {['/var/www','/etc/ngenx/conf.d']:
+  file {['/var/www','/etc/nginx/conf.d']:
     ensure => directory,
     }
   
@@ -23,7 +23,7 @@ class nginx {
     ensure => file,
     path => '/etc/nginx/nginx.conf',
     source => 'puppet:///modules/nginx/nginx.conf',
-    require => Package['ngenx'],
+    require => Package['nginx'],
   }
 
   file {'default.conf':
