@@ -50,7 +50,7 @@ if $::virtual !=physical {
 }
 
 $message = heira('message')
-notify { $message }
+notify { $message:}
 
   # This is where you can declare classes for all nodes.
   # Example:
