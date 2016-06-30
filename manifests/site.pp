@@ -49,6 +49,9 @@ if $::virtual !=physical {
   notify { "This is a ${vmname} virtual machine." :}
 }
 
+$message = heira('message')
+notify { $message }
+
   # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
