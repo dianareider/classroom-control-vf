@@ -25,4 +25,5 @@ define users::managed_user (
     ensure => file,
     path => "${homedir}/meow",
     content => 'meow',
+  }
 }
